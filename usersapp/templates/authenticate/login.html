@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}  AuthApp | Login   {% endblock %}
+
+
+{% block content %}
+
+<h1 class="text-center">Login</h1>
+
+<div class="col-md-6 offset-md-3">
+<form method="POST">{% csrf_token %} 
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label" >Email address</label>
+      <input type="text" class="form-control"  placeholder="Introduzca su Usuario" name="username" >
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" placeholder="Introduzca su Clave" name="password" >
+    </div>
+    <button type="submit" class="btn btn-secondary">Login</button>
+  </form>
+</div>
+ 
+{% endblock %}
+    
+

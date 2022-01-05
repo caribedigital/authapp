@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}  AuthApp | Home   {% endblock %}
+
+
+{% block content %}
+
+<h1>Home Authenticate</h1>
+
+{% if user.is_authenticated %}
+
+<p>Name: {{ user.first_name }} {{ user.last_name }} </p>
+<p> Username: {{ user.username}}</p>
+<p>Email: {{user.email}} </p>
+
+{% endif %}
+
+    
+{% endblock %}
+    
